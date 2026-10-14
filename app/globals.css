@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+:root {
+  /* Resound Brand Tokens (Electric Violet & Midnight Obsidian) */
+  --color-bg: #0b0d14;
+  --color-surface: #131722;
+  --color-surface-elevated: #1c2233;
+  --color-surface-highlight: #242c42;
+  --color-border: #23293d;
+  --color-border-input: #64748b;
+  --color-text: #ffffff;
+  --color-text-muted: #94a3b8;
+  --color-text-subtle: #8b9cb3;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #8b5cf6;
+  --color-on-accent: #ffffff;
+  --color-danger: #f43f5e;
+  --color-success: #10b981;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-pop: 0 16px 32px rgba(0, 0, 0, 0.8);
+  --shadow-play: 0 8px 20px rgba(124, 58, 237, 0.45);
+}
+
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-elevated: var(--color-surface-elevated);
+  --color-surface-highlight: var(--color-surface-highlight);
+  --color-border: var(--color-border);
+  --color-border-input: var(--color-border-input);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-subtle: var(--color-text-subtle);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-on-accent: var(--color-on-accent);
+  --color-danger: var(--color-danger);
+  --color-success: var(--color-success);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-pop: var(--shadow-pop);
+  --shadow-play: var(--shadow-play);
+}
+
+/* Custom Sleek Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  user-select: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Audio Scrubber & Slider Styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  opacity: 0;
+  transition: opacity 100ms ease, transform 100ms ease;
+  margin-top: -4px;
+}
+
+.group:hover input[type="range"]::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+.group:hover input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* Sound Wave Equalizer Animation */
+@keyframes soundwave {
+  0% { height: 3px; }
+  50% { height: 16px; }
+  100% { height: 3px; }
+}
+
+.animate-wave-1 {
+  animation: soundwave 1s ease-in-out infinite;
+}
+
+.animate-wave-2 {
+  animation: soundwave 0.8s ease-in-out infinite 0.2s;
+}
+
+.animate-wave-3 {
+  animation: soundwave 1.2s ease-in-out infinite 0.4s;
+}
+
+.animate-wave-4 {
+  animation: soundwave 0.9s ease-in-out infinite 0.1s;
+}

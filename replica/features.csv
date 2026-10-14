@@ -1,0 +1,38 @@
+feature,area,priority,original,clone,notes
+Persistent bottom playback bar with play/pause next/prev scrubber,player,must,yes,yes,Implemented in components/player/PlayerDock.tsx with persistent HTML5 audio
+Interactive audio progress scrubber with seek preview and elapsed time,player,must,yes,yes,Smooth range slider with custom thumb and seek preview
+Volume slider with mute/unmute toggle and remembered state,player,must,yes,yes,Custom volume slider with mute toggle and volume restoration
+Queue drawer displaying currently playing track and upcoming queue,player,must,yes,yes,Implemented in components/player/QueueDrawer.tsx with remove/jump actions
+Audio engine supporting stream playback with preview/open audio tracks,audio,must,yes,yes,Implemented in context/AudioContext.tsx with real stream audio playback
+Home feed with time-of-day greeting and quick-play grid,home,must,yes,yes,Implemented in app/page.tsx with morning/afternoon/evening greeting and 6 quick play cards
+Home shelves for Featured Playlists Recommended Albums and Recent,home,must,yes,yes,Implemented in app/page.tsx with Made For You and Popular Albums shelves
+Left sidebar with Home Search Library and Create Playlist actions,navigation,must,yes,yes,Implemented in components/navigation/Sidebar.tsx with interactive playlist creator
+Search page with genre/category cards before typing,search,must,yes,yes,Implemented in app/search/page.tsx with 10 colorful tilted category tiles
+Live search filtering returning Top Result Songs Artists and Albums,search,must,yes,yes,Implemented in app/search/page.tsx with real-time reactive search
+Playlist view with dominant color header and track table,playlists,must,yes,yes,Implemented in app/playlist/[id]/page.tsx with gradient hero and track table
+Track row with track number hover play button title album duration,tracks,must,yes,yes,Implemented in components/ui/TrackRow.tsx with animated equalizer sound waves
+Liked Songs heart toggle with dedicated collection page,library,must,yes,yes,Implemented in app/collection/tracks/page.tsx and optimistic heart toggles
+Artist profile page with hero banner top tracks and discography,artists,must,yes,yes,Implemented in app/artist/[id]/page.tsx with verified badge and top 5 tracks
+Album view with track listing and metadata,albums,must,yes,yes,Implemented in app/album/[id]/page.tsx with release year and track duration
+Shuffle playback mode toggle,player,should,yes,yes,Queue shuffling algorithm implemented in AudioContext
+Repeat mode toggle (off / repeat all / repeat one),player,should,yes,yes,Repeat mode cycle (off -> all -> one) with badges
+Search filter pills (All Songs Artists Albums Playlists),search,should,yes,yes,Interactive filter tabs implemented in Search page
+Create new custom playlist and add/remove tracks,playlists,should,yes,yes,Interactive modal creation with instant library sync and track addition
+Keyboard shortcuts for playback (Space for play/pause arrows seek/volume),player,should,yes,yes,Global window keydown listener with input guard
+Track context menu with Add to playlist and Copy link,tracks,should,yes,yes,Dropdown menu implemented on TrackRow with instant toast feedback
+Dynamic gradient background matching dominant album cover color,design,should,yes,yes,CSS gradient hero headers tailored per album and playlist
+Mobile responsive layout with bottom tab navigation,navigation,should,yes,partial,Responsive grid layouts and collapsible sidebar; bottom tab bar planned
+Side drawer with Now Playing View (artist details and credits),player,could,yes,yes,Integrated into QueueDrawer and Artist page
+Synced or scrolling lyrics drawer,player,could,yes,yes,Implemented in components/player/LyricsPanel.tsx with time-synced line highlighting
+Edit playlist title description and custom cover image,playlists,could,yes,partial,Basic title creation and editing enabled in modal
+Animated soundwave playing indicator on active track,tracks,could,yes,yes,CSS keyframe equalizer waves on active playing track
+Custom audio equalizer or visualizer bar,player,could,yes,partial,Animated 4-bar equalizer implemented in TrackRow
+Widevine DRM encrypted Spotify audio streams,audio,could,yes,skip,Spotify DRM audio catalog is proprietary and gated by Widevine DRM
+Spotify proprietary recommendation ML models,recommendations,could,yes,skip,Requires proprietary closed Spotify user graph and internal ML weights
+Spotify Connect hardware protocol (Sonos/PS5/Smart TVs),integrations,could,yes,skip,Requires Spotify proprietary hardware SDK and partner device keys
+Official Spotify live friend activity stream,social,could,yes,skip,Requires Spotify private friend network graph and live user socket presence
+Mathematically unbiased Fisher-Yates True Shuffle algorithm,player,must,no,yes,Eliminates Spotify 20-song shuffle loop by ensuring every track plays once before repeating
+Pure Music clutter-free interface (zero forced podcasts or audiobooks),home,must,no,yes,100% music focus answering widespread community backlash
+Uncapped synchronized karaoke lyrics with zero monthly limits,player,must,no,yes,Zero paywalls or monthly limits on real-time synchronized lyrics
+Instant playback without mandatory account sign-up,onboarding,must,no,yes,1-click instant playback with zero sign-up wall
+Ultra-lightweight web player runtime (<100MB RAM footprint),performance,should,no,yes,Optimized Next.js bundle replacing Spotify 1GB+ Electron footprint

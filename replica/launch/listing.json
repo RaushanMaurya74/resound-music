@@ -1,0 +1,20 @@
+{
+  "avoid": [
+    "Spotify",
+    "Spotify AB",
+    "Spotify Web Player"
+  ],
+  "app_store": {
+    "name": "Resound: Pure Music Player",
+    "subtitle": "True Shuffle & Synced Lyrics",
+    "promotional_text": "Experience true random shuffle where every track plays once. Stream pure music with zero podcasts, zero clutter, and synchronized lyrics on every track.",
+    "description": "Resound is designed for listeners who want pure music without algorithmic clutter, podcast feeds, or repetitive shuffle loops.\n\nKey Highlights:\n- True Random Shuffle: Powered by the Fisher-Yates shuffle engine so every track in your playlist plays exactly once before any repeat.\n- Pure Music Focus: Zero podcasts, audiobooks, or auto-playing video clips taking up your screen.\n- Real-Time Synced Lyrics: Karaoke-style synchronized lyrics on every track without monthly limits or paywalls.\n- Lightweight Performance: Sub-second response times and minimal memory footprint.\n- Instant Play: Start listening immediately with no mandatory sign-up.",
+    "keywords": "audio,streaming,songs,albums,artists,playlists,tracks,equalizer,karaoke,offline,hifi,lossless",
+    "whats_new": "Introducing Resound with the Fisher-Yates True Shuffle engine and live synchronized karaoke lyrics."
+  },
+  "google_play": {
+    "title": "Resound: Pure Music Player",
+    "short_description": "Stream pure music with true random shuffle and synchronized karaoke lyrics.",
+    "full_description": "Resound is designed for listeners who want pure music without algorithmic clutter, podcast feeds, or repetitive shuffle loops.\n\nKey Highlights:\n- True Random Shuffle: Powered by the Fisher-Yates shuffle engine so every track in your playlist plays exactly once before any repeat.\n- Pure Music Focus: Zero podcasts, audiobooks, or auto-playing video clips taking up your screen.\n- Real-Time Synced Lyrics: Karaoke-style synchronized lyrics on every track without monthly limits or paywalls.\n- Lightweight Performance: Sub-second response times and minimal memory footprint.\n- Instant Play: Start listening immediately with no mandatory sign-up."
+  }
+}

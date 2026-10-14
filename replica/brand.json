@@ -1,0 +1,17 @@
+{
+  "name": "Resound",
+  "tagline": "Pure Music. True Shuffle.",
+  "avoid": [
+    "Spotify",
+    "Spotify AB",
+    "Spotify Web Player"
+  ],
+  "domains": [
+    "spotify.com",
+    "open.spotify.com"
+  ],
+  "colors": [
+    "#1db954",
+    "#1ed760"
+  ]
+}
