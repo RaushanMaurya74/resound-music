@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resound (resound-music)
+
+> **Pure Music. True Shuffle. Zero Distractions.**
+
+Resound is a fast, lightweight music streaming web player designed for music purists. Built with Next.js 16 (App Router + Turbopack), TypeScript, and Tailwind CSS.
+
+---
+
+## Key Features
+
+- **Fisher-Yates True Shuffle Engine:** Mathematically unbiased track randomization. Every track in your playlist plays exactly once before repeating.
+- **Pure Music Feed:** 100% focused on music. Zero podcasts, zero audiobooks, zero algorithmic clutter.
+- **Synchronized Karaoke Lyrics:** Real-time synced lyric drawer with smooth auto-scroll.
+- **Persistent Player Dock:** Persistent HTML5 audio stream with keyboard shortcuts (`Space` to toggle, `J`/`K` to skip, `S` for true shuffle).
+- **Sub-100MB Memory Footprint:** Lightning-fast page loads and minimal RAM consumption.
+- **Full Parity Suite:** Home feed, Search & Browse, Curated Playlists, Album Views, Artist Profiles, and Liked Songs.
+- **Supabase & Stripe Ready:** PostgreSQL schema with Row-Level Security and Stripe Checkout subscriptions.
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
+```bash
+cp .env.example .env.local
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Testing & Quality Gate
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run the automated integration test suite:
+```bash
+node tests/run-tests.mjs
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the brand sweep audit:
+```bash
+node replica/brand/sweep.js
+```
 
-## Deploy on Vercel
+Check WCAG 2.2 color contrast compliance:
+```bash
+node replica/design/contrast.js replica/design/tokens.json
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+MIT
